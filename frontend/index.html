@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Water Gun</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+  <h1 class="text-3xl font-bold mb-6">🐍 Snake Water Gun Game 🔫</h1>
+
+  <!-- Name Input -->
+  <input
+    id="playerName"
+    type="text"
+    placeholder="Enter your name"
+    class="mb-4 p-2 border border-gray-300 rounded w-64"
+  />
+
+  <!-- Game Buttons -->
+  <div class="space-x-4 mb-6">
+    <button class="choice-btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" data-choice="snake">Snake</button>
+    <button class="choice-btn bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded" data-choice="water">Water</button>
+    <button class="choice-btn bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded" data-choice="gun">Gun</button>
+  </div>
+
+  <!-- Result Output -->
+  <div id="result" class="text-xl font-medium text-center mb-6"></div>
+
+  <!-- Action Buttons -->
+  <div class="flex space-x-4 mb-6">
+    <button id="leaderboardBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">
+      🏆 Show Leaderboard
+    </button>
+    <button id="clearBtn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+      🗑 Clear History
+    </button>
+  </div>
+
+  <!-- Leaderboard Section -->
+  <div id="leaderboard" class="w-full max-w-md bg-white shadow p-4 rounded">
+    <h2 class="text-2xl font-semibold mb-2 text-center">Leaderboard</h2>
+    <ul id="leaderboard-list" class="list-decimal pl-5 text-lg text-gray-800"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
